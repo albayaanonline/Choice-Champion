@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "Codee Voting App"
+version = "1.0.0"
+id = "artifacts/codee"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/" ]
+localPort = 18101
+
+[services.development]
+run = "pnpm --filter @workspace/codee run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/codee", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/codee", "run", "serve" ]
+
+[services.env]
+PORT = "18101"
+BASE_PATH = "/"

@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "loaM0muFx65pFkQzm9rRn"
+uri = "file://artifacts/codee/assets/images/icon.png"
+type = "image"
+title = "codee app icon"
